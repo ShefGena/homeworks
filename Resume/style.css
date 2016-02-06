@@ -1,0 +1,61 @@
+body {
+			background: #f0f0f0;
+			margin: 20px;
+			padding: 20px;
+			
+			font-family: 'Open Sans', 'Helvetica Light', 'Helvetica Neue', 'Arial Narrow', Helvetica, Arial, serif;
+			font-weight: 300;
+			line-height: 22px;
+			font-size: 14px;
+
+			color: #000;
+		}
+A:visited {
+    color: #0000FF;
+   }
+A{
+   color: #0000FF;
+   }
+h1 {
+    font-size: 250%;
+}
+h2 {
+    font-size: 130%;
+}
+dd{
+	font-size: 120%;
+	margin-top: 1em;
+}
+dt{
+font-size: 130%;
+}
+td{
+font-size: 130%;
+}
+#photo {
+    float: left;
+    height: 200px;
+    margin-top: 4px;
+    overflow: hidden;
+    width: 160px;
+		
+}
+#title {
+    border-bottom: 1px solid #000;
+    line-height: 42px;
+    margin: 0 0 20px;
+    padding-bottom: 20px;
+}
+
+table {
+width:1124px;
+}
+dl{
+width:1124px;
+}
+.time{
+text-align: right
+}
+.info{
+text-align: left
+}
