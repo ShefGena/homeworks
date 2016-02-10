@@ -9,5 +9,6 @@ if($a == $b){
 }
 echo'<br />';
 var_dump($a);
+echo "& ";
 var_dump($b);
 ?>
