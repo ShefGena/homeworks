@@ -8,31 +8,41 @@ include_once "msgs.lib.php";  // выведет все что может require
 	<title>Регистрационная форма</title>
 	<style type="text/css">
    #layer1 {	
-	 width:450px;
+	 width:40%;
+	 padding-left:25px;
+	 padding-right:25px;
 	 float:right; 
 	 background-color:#5F9EA0;
-	 color:#D8D8D8;
+	 color:white;
 	 font-style:italic;
 	 -moz-border-radius: 5px;
 	 -webkit-border-radius: 5px;
-	 border-radius: 5px;
+	  border-radius:10px 10px 0 10px;
    background-position:top center; 
    background-repeat:no-repeat; 
-  text-align: justify; 
+   text-align: justify; 
+	 word-wrap: break-word;
+
    }
    #layer2 {
-   width:450px;
-   clear:both; 
+   width:40%;
+   clear:both;
+	 	 
    background-color:#3CB371;
-   color:#D8D8D8; 
+	 font-style:italic;
+	 padding-left:25px;
+	 padding-right:25px;
+	 padding-top :5px;
+   color:white; 
    -moz-border-radius: 5px; 
    -webkit-border-radius: 5px;
-   border-radius: 5px;
+    border-radius: 10px 10px 10px 0; 
   background-position:top center;
   background-repeat:no-repeat;
   text-align: justify;
-   
-   }
+	word-wrap: break-word;
+
+  }
    </style>
 </head>
 <body>

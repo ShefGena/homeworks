@@ -18,30 +18,27 @@ function addContent($messages){
 }
 function showContent($messages){
 	if(isset($messages)){												 // если переменная существует
-	$messages = array_reverse($messages);
+	//$messages = array_reverse($messages);
+	$i = 0;
 	$cens = ["bad", "worst", "ugly"];									// проверка на плохые слова
 	foreach($messages as $post){
+		$i++;
 		foreach($cens as $word){
 			$post["userName"]=str_replace($word, 'CENSORED', $post['userName']); 
 			$post["userMessage"]=str_replace($word, 'CENSORED', $post['userMessage']); 
 		}
-		$i = 1;
-		while ($i<=2){
 		if($i%2==0){
-		echo '<div align= "right" id="layer1">';
-		echo "<p>Пользователь {$post["userName"]} пишет: </p>";
-		echo "<p>{$post["userMessage"]}</p>".'<br>';
-		echo '</div>';
-
-		}else{
-			echo '<div align= "left" id="layer2">';
-		echo "<p>Пользователь {$post["userName"]} пишет: </p>";
-		echo "<p>{$post["userMessage"]}</p>".'<br>';
-		echo '</div>';
-		}$i++;
-		
-		}
+								echo '<div id="layer1">';
+								echo "<p>Пользователь {$post["userName"]} пишет: </p>";
+								echo "<p>{$post["userMessage"]}</p>".'<br>';
+								echo '</div>';
+							}else{
+										echo '<div id="layer2">';
+										echo "<p>Пользователь {$post["userName"]} пишет: </p>";
+										echo "<p>{$post["userMessage"]}</p>".'<br>';
+										echo '</div>';
+									}		
+			}
 		}
 	}
-}
 ?>
