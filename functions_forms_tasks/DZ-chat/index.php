@@ -52,8 +52,12 @@ include_once "msgs.lib.php";  // выведет все что может require
 		<p>Оставьте свое сообщение</p>
 		<textarea name="userMessage" rows="7" cols="35"></textarea>
 		<br>
+		<p>Добавить слово в антимат:</p>
+		<input type="text" name="antiMat" placeholder="Введите пожалуйста матюк" />
+		<br>
+		<br>
 		<input type = "submit" value="Отправить форму" name="submit"/>
-	</form>
+		</form>
 	
 <?php
 $messages = getContent();

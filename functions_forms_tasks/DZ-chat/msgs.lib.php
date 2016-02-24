@@ -24,8 +24,8 @@ function showContent($messages){
 	foreach($messages as $post){
 		$i++;
 		foreach($cens as $word){
-			$post["userName"]=str_replace($word, 'CENSORED', $post['userName']); 
-			$post["userMessage"]=str_replace($word, 'CENSORED', $post['userMessage']); 
+			$post["userName"]=str_ireplace($word, 'CENSORED', $post['userName']); 
+			$post["userMessage"]=str_ireplace($word, 'CENSORED', $post['userMessage']); 
 		}
 		if($i%2==0){
 								echo '<div id="layer1">';

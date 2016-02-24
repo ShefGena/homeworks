@@ -1,9 +1,17 @@
 <?php
-error_reporting(E_ALL);
-header('Content-Type: text/html; charset=utf-8');
-$dir = __DIR__;
-$files1 = scandir($dir);
-$files2 = scandir($dir, 1);
+function sovpadenieNeDumau($x, $y){
+$output = array_slice($x, 2);
 echo '<pre>';
-print_r($files1);
+print_r($output);
+foreach($output as $arr){
+	if($arr == $y){
+		echo "est sovpadenie, i eto file $arr" . '<br>';
+	}else{
+		echo'';
+	}
+}
+}
+$z = scandir(__DIR__);
+$word = 'DZ-chat';
+sovpadenieNeDumau($z, $word);
 ?>
