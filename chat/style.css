@@ -1,0 +1,66 @@
+.linkCes {
+    background-color: white;
+	border-radius: 15px ;
+	margin: auto;
+    max-width: 60%;
+    text-align: center;
+}
+body {
+  background-image: url(picture/1.jpg);
+
+ }
+.inputMessage {
+    width: 70%;
+	 background-image: url(picture/1.jpg);
+    margin: auto;
+	border-radius: 15px ;
+	text-align: center;
+    background-color: cornsilk;
+    font-style:italic;
+	color:white;
+
+}
+textarea:focus, input:focus{
+outline: none;
+}
+
+.chat {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    background-image: url(pics/1.jpg);
+    border-radius: 25px;
+
+}
+
+.textarea {
+    padding: 5px;
+    border-radius: 15px;
+}
+.layer1 {
+	color:white;
+	font-style:italic;
+    text-align:left;
+	border-radius: 10px 10px 10px 0;
+    padding: 6px;
+    background-color: #5F9EA0;
+    font-size: 12pt;
+    margin: 20px;
+    opacity: 0.7;
+    max-width: 600px;
+	word-wrap: break-word;
+}
+.layer2 {
+	word-wrap: break-word;
+    max-width: 600px;
+    color:white;
+	font-style:italic;
+    text-align: left;
+    padding: 6px;
+    background-color: #3CB371;
+    font-size: 12pt;
+    border-radius:10px 10px 0 10px;
+    margin: 20px;
+    margin-left: 300px;
+    opacity: 0.7;
+}

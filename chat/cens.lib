@@ -1,0 +1,22 @@
+<?php
+function getCensWords(){
+if(is_readable("badWords.db")){													//проверяет наличие файла и доступ к нему
+	$f = file_get_contents("badWords.db");								// зачитывает
+	$newCens = unserialize($f);
+	return $newCens;
+	}
+}
+
+function addCensWords($newCens){
+if(isset($_POST['add'])){
+	$newCens[] = htmlspecialchars($_POST['cens']);
+	$badWordsDB = serialize($newCens);
+	file_put_contents("badWords.db", $badWordsDB);
+}elseif(isset($_POST['delete'])){
+			$delWords[] = htmlspecialchars($_POST['cens']);
+			$newCens = array_diff($newCens, $delWords);
+			$deletedCensWords = serialize($newCens);           
+			file_put_contents("badWords.db", $deletedCensWords);
+	}
+	return $newCens;
+}

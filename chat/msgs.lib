@@ -1,0 +1,71 @@
+<?PHP
+function getContent(){
+	if(is_readable("messages.db")){													//проверяет наличие файла и доступ к нему
+	$f = file_get_contents("messages.db");								// зачитывает
+	$messages = unserialize($f);
+	return $messages;
+}
+}
+
+function addContent($messages){
+	if(isset($_POST['submit'])){
+	$newPost["userName"] = htmlspecialchars($_POST['userName']);
+	$newPost["userMessage"] = htmlspecialchars($_POST['userMessage']);
+	$messages[] = $newPost;
+	$messagesDB = serialize($messages);
+	file_put_contents("messages.db", $messagesDB);
+	return $messages;
+	}
+}
+
+function censContent ($messages){
+    if (isset($messages)){
+	if(is_readable("badWords.db")){
+	$z = file_get_contents("badWords.db");								// зачитывает
+	$cens = unserialize($z);
+        foreach($messages as $post){
+            foreach ($cens as $word){
+                $post["userName"] = str_ireplace($word,'CENSORED',$post["userName"]);
+                $post["userMessage"] = str_ireplace($word,'CENSORED',$post["userMessage"]);
+            }
+            $messagesCens[]=$post;
+            $messages = $messagesCens;
+        }
+       return($messages);
+	}else{
+	return($messages);
+	}
+ 
+}
+}
+
+
+function showContent($messages){
+    if(isset($messages))               {             // если переменная существует
+        $messages = array_reverse($messages);
+        $i=0;
+        foreach($messages as $post){
+		$i++;
+        $pt=$post['userName'];
+        $pm =$post['userMessage'];
+            $pt = wordwrap($pt, 40);
+            $pm = wordwrap($pm, 100);
+            if ($i % 2 ==0) {
+                echo "<div class='layer1'><p>Пользователь: <b> {$pt}</b> </p>";
+                echo "<p>{$pm}</p></div>";
+            }
+            else {
+                echo "<div class='layer2'><p>Пользователь: <b> {$pt}</b> </p>";
+                echo "<p>  {$pm}</p></div>";
+            }
+        }
+    }
+}
+
+	
+	
+	
+	
+	
+	
+	
